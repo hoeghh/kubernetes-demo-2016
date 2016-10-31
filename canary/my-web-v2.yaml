@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: my-web
+    track: canary
+  name: my-web-canary
+  namespace: default
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      run: my-web
+      track: canary
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: my-web
+        track: canary
+    spec:
+      containers:
+      - image: hoeghh/multitool:v2
+        name: my-web-canary
+        ports:
+        - containerPort: 80
+          protocol: TCP
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
