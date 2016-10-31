@@ -15,7 +15,7 @@ watchservices.sh
 
 In another terminal, run watchservices to keep requesting the service
 ```
-source watchservices.sh
+source getService.sh
 ```
 
 Now, in the first terminal, run rollingupdate2v2.sh to update the images to v2 in a rolling maner
