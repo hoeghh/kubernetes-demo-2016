@@ -24,3 +24,14 @@ source deployv2-canary.sh
 ```
 
 Watch the output and see the new text in some of the output
+
+
+Scale the old replicaset down to zero
+```
+kubectl scale deployment my-web --replicas=0
+```
+
+Scale the new canary up to 10
+```
+kubectl scale deployment my-web-canary --replicas=10
+```
