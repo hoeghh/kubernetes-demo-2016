@@ -6,7 +6,7 @@ metadata:
   name: my-web
   namespace: default
 spec:
-  replicas: 10
+  replicas: 4
   selector:
     matchLabels:
       run: my-web

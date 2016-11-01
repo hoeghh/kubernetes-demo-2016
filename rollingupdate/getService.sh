@@ -8,5 +8,5 @@ echo $k8sNode:$NodeIP
 
 while true; do 
   curl $NodeIP:$NodePort
-  sleep 0.5
+  sleep 0.1
 done
