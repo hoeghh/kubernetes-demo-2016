@@ -2,8 +2,8 @@
 
 Start by creating a deployment and service
 ```
-source deployv1.sh
-source createService.sh
+source 1-deployv1.sh
+source 2-createService.sh
 ```
 
 check deployment history via ```source deployment-history.sh```
@@ -20,19 +20,19 @@ source getService.sh
 
 Now, in the first terminal, run rollingupdate2v2.sh to update the images to v2 in a rolling maner
 ```
-source rollingupdate2v2.sh
+source 3-rollingupdate2v2.sh
 ```
 
 Check the output in the two other terminals
 
 Check the deployment history
 ```
-source deployment-history.sh
+source 4-deployment-history.sh
 ```
 
 Now, rollback the deployment to v1 and check the output in the two ither terminal
 ```
-source rollback.sh
+source 5-rollback.sh
 ```
 
 To see our replicasets, do
